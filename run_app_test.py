@@ -20,7 +20,7 @@ if 'data_folders' not in st.session_state:
     st.session_state['x_min_lim'] = 0
     st.session_state['x_max_lim'] = 1
     st.session_state['y_min_lim'] = 0
-    st.session_state['y_max_lim'] = 0
+    st.session_state['y_max_lim'] = 1
 
 # サイドバーにCVかCPの選択メニューを追加
 plot_type = st.sidebar.selectbox('プロットタイプを選択', ['CP', 'CV'])
