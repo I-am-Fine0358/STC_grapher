@@ -12,6 +12,12 @@ def read_mpt_files(path):
     print(len(mpt_files))
     return mpt_files
 
+def read_cv_files(path):
+    cv_files = glob.glob(path + "/*.mpt")
+    mpt_files = [file for file in mpt_files if "_CV" in file]
+    cv_files.sort()
+    return cv_files
+
 def determine_header_lines(file_path, keyword='Nb header lines'):
     with open(file_path, 'r') as file:
         lines = file.readlines()
@@ -46,6 +52,10 @@ def CP_grapher(folder_path):
 
     return data_extracted
 
+"""def CV_grapher(folder_path):
+    all_CVs = 
+    pass
+"""
 
 if __name__ == "__main__":
     CP_grapher("/Users/genkioyafuso/Documents/Sacci_lab/STC_grapher/data_dir/")

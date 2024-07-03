@@ -122,11 +122,13 @@ if plot_type == 'CP':
         fig.update_layout(
             xaxis_title=xlabel,
             yaxis_title=ylabel,
-            xaxis=dict(range=[x_min, x_max]),
+            xaxis=dict(range=[x_min, x_max], tickformat=""),  # 軸のフォーマットを指定
             yaxis=dict(range=[y_min, y_max]),
             yaxis_autorange='reversed',  # y軸を反転
             plot_bgcolor='black',  # 背景色を黒に設定
-            paper_bgcolor='black'  # 背景色を黒に設定
+            paper_bgcolor='black',  # 背景色を黒に設定
+            width=800,  # 幅を設定
+            height=700  # 高さを設定
         )
 
         st.plotly_chart(fig)
