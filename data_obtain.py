@@ -14,7 +14,7 @@ def read_mpt_files(path):
 
 def read_cv_files(path):
     cv_files = glob.glob(path + "/*.mpt")
-    mpt_files = [file for file in mpt_files if "_CV" in file]
+    cv_files = [file for file in cv_files if "_CV" in file]
     cv_files.sort()
     return cv_files
 
@@ -40,6 +40,19 @@ def extract_time_and_voltage(file_path, header_line):
         print(f"Error: Required columns {required_columns} not found in {file_path}")
         return pd.DataFrame()
 
+def extract_current_voltage(file_path, header_line):
+    df = pd.read_csv(file_path, skiprows=header_line-1, delimiter='\t')
+    column_names = df.columns
+
+    required_columns = ["Ewe/V", "<I>/mA"]
+    existing_columns = [col for col in required_columns if col in column_names]
+    if len(existing_columns) == len(required_columns):
+        return df[existing_columns]
+    else:
+        print(f"Error: Required columns {required_columns} not found in {file_path}")
+        return pd.DataFrame()
+
+
 def CP_grapher(folder_path):
     all_mpts = read_mpt_files(folder_path)
 
@@ -52,10 +65,17 @@ def CP_grapher(folder_path):
 
     return data_extracted
 
-"""def CV_grapher(folder_path):
-    all_CVs = 
-    pass
-"""
+def CV_grapher(folder_path):
+    all_CVs = read_cv_files(folder_path)
+
+    data_extracted = []
+
+    for file_path in all_CVs:
+        header_extracted = determine_header_lines(file_path)
+        data_extracted.append(extract_current_voltage(file_path, header_extracted))
+        extract_current_voltage(file_path, header_extracted).to_csv(file_path.replace(".mpt",".csv"), index=False, encoding='utf-8')
+    print(data_extracted)
+    return data_extracted
 
 if __name__ == "__main__":
     CP_grapher("/Users/genkioyafuso/Documents/Sacci_lab/STC_grapher/data_dir/")
