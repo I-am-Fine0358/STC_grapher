@@ -45,6 +45,7 @@ if st.sidebar.button('フォルダを追加'):
     if os.path.isdir(folder):
         if plot_type == 'CP':
             data = CP_grapher(folder)
+            data["time/h"] = data["time/s"] / 3600  # 秒を時間に変換
             st.session_state['data_folders'].append(folder)
             st.session_state['data'].append(data)
             st.session_state['plot_colors'].append('orange')  # デフォルトの色をオレンジに設定
@@ -52,8 +53,8 @@ if st.sidebar.button('フォルダを追加'):
             st.session_state['line_types'].append('solid')  # デフォルトの線の種類を設定
             st.session_state['line_widths'].append(2)  # デフォルトの線幅を設定
             # 各軸の最小値と最大値を計算
-            st.session_state['x_min'] = min(st.session_state['x_min'], data["time/s"].min())
-            st.session_state['x_max'] = max(st.session_state['x_max'], data["time/s"].max())
+            st.session_state['x_min'] = min(st.session_state['x_min'], data["time/h"].min())
+            st.session_state['x_max'] = max(st.session_state['x_max'], data["time/h"].max())
             st.session_state['y_min'] = min(st.session_state['y_min'], data["Ewe/V"].min())
             st.session_state['y_max'] = max(st.session_state['y_max'], data["Ewe/V"].max())
         elif plot_type == 'CV':
@@ -76,7 +77,7 @@ if st.sidebar.button('フォルダを追加'):
 
 # アップロードされたフォルダの一覧を表示
 st.sidebar.write('追加されたフォルダ:')
-preset_colors = ['orange', 'blue', 'orange', 'green', 'red', 'violet', 'brown', 'black']
+preset_colors = ['orange', 'blue', 'green', 'red', 'violet', 'brown', 'black']
 preset_types = {
     "solid": 'solid',
     "dash": 'dash',
@@ -113,7 +114,7 @@ for i, folder in enumerate(st.session_state['data_folders']):
 # プロットタイプがCPの場合のみプロットを表示
 if plot_type == 'CP':
     # 軸ラベルと範囲の設定
-    xlabel = st.text_input('x軸のラベルを入力', 'time/s')
+    xlabel = st.text_input('x軸のラベルを入力', 'time/h')
     ylabel = st.text_input('y軸のラベルを入力', 'Ewe/V')
     x_min = st.number_input('x軸の最小値を入力', value=st.session_state['x_min'])
     x_max = st.number_input('x軸の最大値を入力', value=st.session_state['x_max'])
@@ -128,7 +129,7 @@ if plot_type == 'CP':
         # st.session_state['data']にデータがある場合、データをプロット
         for i, data in enumerate(st.session_state['data']):
             fig.add_trace(go.Scatter(
-                x=data["time/s"], 
+                x=data["time/h"], 
                 y=data["Ewe/V"],
                 mode='lines',
                 line=dict(color=st.session_state['plot_colors'][i], dash=st.session_state['line_types'][i], width=st.session_state['line_widths'][i]),
@@ -157,7 +158,7 @@ if plot_type == 'CP':
         # st.session_state['data']にデータがある場合、データをプロット
         for i, data in enumerate(st.session_state['data']):
             ax.plot(
-                data["time/s"], 
+                data["time/h"], 
                 data["Ewe/V"], 
                 color=st.session_state['plot_colors'][i], 
                 linestyle=matplotlib_line_types[st.session_state['line_types'][i]], 
