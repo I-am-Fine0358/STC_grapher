@@ -1,0 +1,73 @@
+EC-Lab ASCII FILE
+Nb header lines : 48                          
+
+Open Circuit Voltage
+
+Run on channel : 4 (SN 13148)
+User : 
+Electrode connection : standard
+Potential control : Ewe
+Ewe ctrl range : min = -1.00 V, max = 1.00 V
+Ewe,I filtering : 5 Hz
+Safety Limits :
+	Do not start on E overload
+Channel : Floating
+Acquisition started on : 06/24/2024 21:42:04.718
+Loaded Setting File :  NONE
+Saved on :
+	File : 1540_A_03_OCV_C04.mpr
+	Directory : C:\Users\mAtsuhitA\Desktop\Oyafuso\20240624_???????4\
+	Host : 192.109.209.100
+Device : VSP-300 (SN 0960)
+Address : USB
+EC-Lab for windows v11.50 (software)
+Internet server v11.50 (firmware)
+Command interpretor v11.50 (firmware)
+Electrode material : 
+Initial state : 
+Electrolyte : 
+Comments : 
+Cable : standard
+Electrode surface area : 0.001 cm2
+Characteristic mass : 0.001 g
+Equivalent Weight : 0.000 g/eq.
+Density : 0.000 g/cm3
+Volume (V) : 0.001 cm3
+Text export
+   Mode : Standard
+   Time format : Elapsed
+Cycle Definition : Charge/Discharge alternance
+tR (h:m:s)          0:10:0.0000         
+dER/dt (mV/h)       0.0                 
+record              Ewe                 
+dER (mV)            10.00               
+dtR (s)             30.0000             
+E range min (V)     -1.000              
+E range max (V)     1.000               
+
+mode	error	time/s	Ewe/V	
+3	0	7.506060055240072E+003	-4.5855686E-001
+3	0	7.506165055238802E+003	-4.4854304E-001
+3	0	7.506463855235183E+003	-4.3844336E-001
+3	0	7.507269455225440E+003	-4.2843059E-001
+3	0	7.509603055197178E+003	-4.1842356E-001
+3	0	7.539603054833962E+003	-4.1333416E-001
+3	0	7.569603054470746E+003	-4.1583496E-001
+3	0	7.599603054107531E+003	-4.1725147E-001
+3	0	7.629603053744315E+003	-4.1807616E-001
+3	0	7.659603053381099E+003	-4.1858393E-001
+3	0	7.689603053017883E+003	-4.1890845E-001
+3	0	7.719603052654667E+003	-4.1908029E-001
+3	0	7.749603052291452E+003	-4.1916808E-001
+3	0	7.779603051928236E+003	-4.1925973E-001
+3	0	7.809603051565020E+003	-4.1927117E-001
+3	0	7.839603051201804E+003	-4.1918337E-001
+3	0	7.869603050838588E+003	-4.1924065E-001
+3	0	7.899603050475373E+003	-4.1912609E-001
+3	0	7.929603050112157E+003	-4.1912228E-001
+3	0	7.959603049748941E+003	-4.1905737E-001
+3	0	7.989603049385725E+003	-4.1899249E-001
+3	0	8.019603049022509E+003	-4.1893899E-001
+3	0	8.049603048659294E+003	-4.1892758E-001
+3	0	8.079603048296078E+003	-4.1881686E-001
+3	0	8.106060047975756E+003	-4.1877103E-001

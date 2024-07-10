@@ -1,0 +1,73 @@
+EC-Lab ASCII FILE
+Nb header lines : 48                          
+
+Open Circuit Voltage
+
+Run on channel : 4 (SN 13148)
+User : 
+Electrode connection : standard
+Potential control : Ewe
+Ewe ctrl range : min = -1.00 V, max = 1.00 V
+Ewe,I filtering : 5 Hz
+Safety Limits :
+	Do not start on E overload
+Channel : Floating
+Acquisition started on : 07/01/2024 16:51:31.465
+Loaded Setting File :  C:\Users\mAtsuhitA\Desktop\Oyafuso\20240624_???????4\1540_A.mps
+Saved on :
+	File : 600_A_03_OCV_C04.mpr
+	Directory : C:\Users\mAtsuhitA\Desktop\Oyafuso\20240624_???????4\600_A\
+	Host : 192.109.209.100
+Device : VSP-300 (SN 0960)
+Address : USB
+EC-Lab for windows v11.50 (software)
+Internet server v11.50 (firmware)
+Command interpretor v11.50 (firmware)
+Electrode material : 
+Initial state : 
+Electrolyte : 
+Comments : 
+Cable : standard
+Electrode surface area : 0.001 cm2
+Characteristic mass : 0.001 g
+Equivalent Weight : 0.000 g/eq.
+Density : 0.000 g/cm3
+Volume (V) : 0.001 cm3
+Text export
+   Mode : Standard
+   Time format : Elapsed
+Cycle Definition : Charge/Discharge alternance
+tR (h:m:s)          0:10:0.0000         
+dER/dt (mV/h)       0.0                 
+record              Ewe                 
+dER (mV)            10.00               
+dtR (s)             30.0000             
+E range min (V)     -1.000              
+E range max (V)     1.000               
+
+mode	error	time/s	Ewe/V	
+3	0	7.377133056801016E+003	-2.4440251E-001
+3	0	7.377322456798720E+003	-2.3435438E-001
+3	0	7.377701856794127E+003	-2.2434059E-001
+3	0	7.378549656783871E+003	-2.1433544E-001
+3	0	7.386393856688897E+003	-2.0433223E-001
+3	0	7.416393856325682E+003	-2.0038441E-001
+3	0	7.446393855962466E+003	-1.9857849E-001
+3	0	7.476393855599250E+003	-1.9745217E-001
+3	0	7.506393855236034E+003	-1.9666949E-001
+3	0	7.536393854872818E+003	-1.9613877E-001
+3	0	7.566393854509603E+003	-1.9568825E-001
+3	0	7.596393854146387E+003	-1.9533700E-001
+3	0	7.626393853783171E+003	-1.9516136E-001
+3	0	7.656393853419955E+003	-1.9492464E-001
+3	0	7.686393853056739E+003	-1.9481774E-001
+3	0	7.716393852693524E+003	-1.9474520E-001
+3	0	7.746393852330308E+003	-1.9464593E-001
+3	0	7.776393851967092E+003	-1.9464594E-001
+3	0	7.806393851603876E+003	-1.9462684E-001
+3	0	7.836393851240660E+003	-1.9456957E-001
+3	0	7.866393850877444E+003	-1.9447793E-001
+3	0	7.896393850514229E+003	-1.9442067E-001
+3	0	7.926393850151013E+003	-1.9438249E-001
+3	0	7.956393849787797E+003	-1.9430231E-001
+3	0	7.977133049536700E+003	-1.9426031E-001

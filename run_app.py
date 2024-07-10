@@ -47,7 +47,7 @@ if st.sidebar.button('フォルダを追加'):
             data = CP_grapher(folder)
             st.session_state['data_folders'].append(folder)
             st.session_state['data'].append(data)
-            st.session_state['plot_colors'].append('white')  # デフォルトの色を白に設定
+            st.session_state['plot_colors'].append('orange')  # デフォルトの色をオレンジに設定
             st.session_state['legends'].append(os.path.basename(folder))  # デフォルトの凡例をフォルダ名に設定
             st.session_state['line_types'].append('solid')  # デフォルトの線の種類を設定
             st.session_state['line_widths'].append(2)  # デフォルトの線幅を設定
@@ -62,7 +62,7 @@ if st.sidebar.button('フォルダを追加'):
                 st.session_state['data_folders'].append(folder)
                 st.session_state['data'].append(data)
                 # Initialize CV specific settings lists
-                st.session_state['plot_colors'] = ['white'] * len(data)
+                st.session_state['plot_colors'] = ['orange'] * len(data)  # デフォルトの色をオレンジに設定
                 st.session_state['legends'] = [f'DataFrame {i+1}' for i in range(len(data))]
                 # 各軸の最小値と最大値を計算
                 st.session_state['x_min'] = min(df["Ewe/V"].min() for df in data)
@@ -76,7 +76,7 @@ if st.sidebar.button('フォルダを追加'):
 
 # アップロードされたフォルダの一覧を表示
 st.sidebar.write('追加されたフォルダ:')
-preset_colors = ['white', 'blue', 'orange', 'green', 'red', 'violet', 'brown']
+preset_colors = ['orange', 'blue', 'orange', 'green', 'red', 'violet', 'brown', 'black']
 preset_types = {
     "solid": 'solid',
     "dash": 'dash',
@@ -193,7 +193,7 @@ elif plot_type == 'CV':
         # サイドバーで各データフレームの設定
         for i, df in enumerate(cv_data):
             if len(st.session_state['plot_colors']) <= i:
-                st.session_state['plot_colors'].append('white')
+                st.session_state['plot_colors'].append('orange')  # デフォルトの色をオレンジに設定
             if len(st.session_state['legends']) <= i:
                 st.session_state['legends'].append(f'DataFrame {i+1}')
             st.sidebar.write(f'DataFrame {i+1}')

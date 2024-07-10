@@ -1,0 +1,70 @@
+EC-Lab ASCII FILE
+Nb header lines : 48                          
+
+Open Circuit Voltage
+
+Run on channel : 3 (SN 13150)
+User : 
+Electrode connection : standard
+Potential control : Ewe
+Ewe ctrl range : min = -1.00 V, max = 1.00 V
+Ewe,I filtering : 5 Hz
+Safety Limits :
+	Do not start on E overload
+Channel : Floating
+Acquisition started on : 07/01/2024 16:51:05.709
+Loaded Setting File :  C:\Users\mAtsuhitA\Desktop\Oyafuso\20240624_???????4\1540_A.mps
+Saved on :
+	File : 600_B_11_OCV_C03.mpr
+	Directory : C:\Users\mAtsuhitA\Desktop\Oyafuso\20240624_???????4\600_B\
+	Host : 192.109.209.100
+Device : VSP-300 (SN 0834)
+Address : 192.109.209.128
+EC-Lab for windows v11.50 (software)
+Internet server v11.50 (firmware)
+Command interpretor v11.50 (firmware)
+Electrode material : 
+Initial state : 
+Electrolyte : 
+Comments : 
+Cable : standard
+Electrode surface area : 0.001 cm2
+Characteristic mass : 0.001 g
+Equivalent Weight : 0.000 g/eq.
+Density : 0.000 g/cm3
+Volume (V) : 0.001 cm3
+Text export
+   Mode : Standard
+   Time format : Elapsed
+Cycle Definition : Charge/Discharge alternance
+tR (h:m:s)          0:10:0.0000         
+dER/dt (mV/h)       0.0                 
+record              Ewe                 
+dER (mV)            10.00               
+dtR (s)             30.0000             
+E range min (V)     -1.000              
+E range max (V)     1.000               
+
+mode	error	time/s	Ewe/V	
+3	0	2.790329104329594E+005	-2.5839144E-001
+3	0	2.790338660322391E+005	-2.4839000E-001
+3	0	2.790638662098870E+005	-2.4661441E-001
+3	0	2.790938663875349E+005	-2.4785542E-001
+3	0	2.791238665651828E+005	-2.4869548E-001
+3	0	2.791538667428307E+005	-2.4916515E-001
+3	0	2.791838669204786E+005	-2.4988684E-001
+3	0	2.792138670981266E+005	-2.5013122E-001
+3	0	2.792438672757749E+005	-2.5057799E-001
+3	0	2.792738674534233E+005	-2.5092927E-001
+3	0	2.793038676310717E+005	-2.5126910E-001
+3	0	2.793338678087201E+005	-2.5155932E-001
+3	0	2.793638679863680E+005	-2.5183043E-001
+3	0	2.793938681640164E+005	-2.5223517E-001
+3	0	2.794238683416648E+005	-2.5241083E-001
+3	0	2.794538685193132E+005	-2.5255594E-001
+3	0	2.794838686969616E+005	-2.5281179E-001
+3	0	2.795138688746099E+005	-2.5305235E-001
+3	0	2.795438690522583E+005	-2.5327763E-001
+3	0	2.795738692299067E+005	-2.5346857E-001
+3	0	2.796038694075551E+005	-2.5356019E-001
+3	0	2.796329099859239E+005	-2.5380456E-001
